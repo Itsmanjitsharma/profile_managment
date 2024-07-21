@@ -14,9 +14,10 @@ import lombok.ToString;
 @Entity
 public class Transaction {
     @Id
-    private int id;
-    private double amount;
+    private String id;
+    private String amount;
     private String description;
     private String date;
-    private String profile_id;
+    private String studentid;
+    private String status;
 }

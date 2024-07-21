@@ -54,7 +54,7 @@ public class AttendanceService {
         AddProfile addProfile = profileRespository.findById(id).get();
           List<Transaction> transactions = new ArrayList<Transaction>();
           List<Attendance> attendances = new ArrayList<Attendance>();
-          transactions.add(new Transaction(1,2400.00,"Paid July month fees","12-07-2024","NEEf9cd2"));
+          //transactions.add(new Transaction(1,2400.00,"Paid July month fees","12-07-2024","NEEf9cd2"));
           attendances = attendanceRepository.findAllByProfileId(id);
           addProfile.setTransactions(transactions);
           addProfile.setAttendances(attendances);
