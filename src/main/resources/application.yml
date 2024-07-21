@@ -15,3 +15,13 @@ paytm.payment:
       CALLBACK_URL: ${paytm.payment.sandbox.callbackUrl}
   mobile: 8152864826
   email: manjitsharma963@gmail.com
+
+
+bezkoder:
+  app:
+    jwtSecret: ======================BezKoder=Spring===========================
+    
+security:
+  basic:
+    enabled: false
+
