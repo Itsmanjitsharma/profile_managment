@@ -1,27 +1,27 @@
-paytm.payment:
-  sandbox:
-    merchantId: 1234
-    merchantKey: 123564
-    channelId: WEB
-    industryTypeId: Retail
-    website: WEBSTAGING
-    paytmUrl: https://securegw-stage.paytm.in/order/process 
-    callbackUrl: http://localhost:8080/pgresponse
-    details:
-      MID: ${paytm.payment.sandbox.merchantId}
-      CHANNEL_ID: ${paytm.payment.sandbox.channelId}
-      INDUSTRY_TYPE_ID: ${paytm.payment.sandbox.industryTypeId} 
-      WEBSITE: ${paytm.payment.sandbox.website}
-      CALLBACK_URL: ${paytm.payment.sandbox.callbackUrl}
-  mobile: 8152864826
-  email: manjitsharma963@gmail.com
-
-
 bezkoder:
   app:
     jwtSecret: ======================BezKoder=Spring===========================
-    
+
 security:
   basic:
     enabled: false
+
+spring:
+  zipkin:
+    base-url: http://zipkin-server:9411/
+
+management:
+  tracing:
+    sampling:
+      probability: 1
+    enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info,matric,env,openapi, swagger-ui
+  endpoint:
+    env:
+      enabled: true
+    info:
+      enabled: true
 
